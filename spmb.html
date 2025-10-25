@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SPMB SMP Negeri 1 Nogosari Tahun Ajaran 2025/2026 - Pendaftaran Seleksi Penerimaan Murid Baru">
+  <meta name="keywords" content="SPMB, Penerimaan Murid Baru, SMP Negeri 1 Nogosari, Pendaftaran Siswa Baru, Boyolali">
+  <title>SPMB 2025/2026 - SMP Negeri 1 Nogosari</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      background-color: #f9f9f9;
+      line-height: 1.6;
+    }
+
+    /* Top Bar */
+    .topbar {
+      background-color: #1a472a;
+      color: white;
+      padding: 8px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      font-weight: 300;
+    }
+
+    .topbar-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background-color: rgba(255,255,255,0.15);
+      transition: 0.3s;
+      color: white;
+      text-decoration: none;
+    }
+
+    .social-icon:hover {
+      background-color: #2ecc71;
+      transform: translateY(-2px);
+    }
+
+    /* Header */
+    header {
+     background-color: white;
+     padding: 0px 20px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+     flex-wrap: wrap;
+     gap: 8px;
+     border-bottom: 1px solid #f5f5f5;
+     min-height: 50px;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .logo-img {
+      width: 180px;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .logo-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .header-text h1 {
+      color: #1a472a;
+      font-size: 30px;
+      margin-bottom: 2px;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .header-text p {
+      color: #666;
+      font-size: 19px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      margin-top: 0;
+      line-height: 1.1;
+    }
+
+    .search-box {
+      flex: 1;
+      min-width: 180px;
+      max-width: 200px;
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 4px 25px 4px 6px;
+      border: 1px solid #e8e8e8;
+      border-radius: 2px;
+      font-size: 14px;
+      transition: 0.2s;
+      height: 50px;
+    }
+
+    .search-box input:focus {
+      border-color: #2ecc71;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.2);
+    }
+
+    .search-box i {
+      position: absolute;
+      right: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #777;
+      font-size: 14px;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #1a472a;
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .menu-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .menu-links a {
+      color: white;
+      text-decoration: none;
+      padding: 16px 22px;
+      display: block;
+      transition: 0.3s;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .menu-links a:hover {
+      background-color: rgba(255,255,255,0.1);
+    }
+
+    .menu-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 3px;
+      background-color: #2ecc71;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .menu-links a:hover::after {
+      width: 80%;
+    }
+
+    .menu-links a.active {
+      background-color: rgba(255,255,255,0.1);
+    }
+
+    .menu-links a.active::after {
+      width: 80%;
+    }
+
+    /* Dropdown */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      min-width: 220px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border-radius: 0 0 8px 8px;
+      overflow: hidden;
+      z-index: 999;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 12px 18px;
+      display: block;
+      text-decoration: none;
+      transition: 0.3s;
+      border-bottom: 1px solid #f0f0f0;
+      font-weight: 400;
+    }
+
+    .dropdown-content a:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f8f9fa;
+      color: #2ecc71;
+      padding-left: 22px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 15px 20px;
+    }
+
+    /* SPMB Button Style */
+    .spmb-btn {
+      background-color: #e74c3c;
+      color: white;
+      padding: 16px 22px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .spmb-btn:hover {
+      background-color: #c0392b;
+      transform: translateY(-2px);
+    }
+
+    .spmb-btn::after {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .menu-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .menu-links.active {
+        display: flex;
+      }
+
+      .menu-links a {
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+      }
+
+      .dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: rgba(0,0,0,0.1);
+      }
+
+      .dropdown-content a {
+        color: white;
+        padding-left: 40px;
+      }
+
+      .dropdown-content a:hover {
+        background-color: rgba(255,255,255,0.1);
+        color: white;
+      }
+
+      .spmb-btn {
+        justify-content: center;
+        background-color: #e74c3c;
+      }
+    }
+
+    /* Hero Section SPMB - DIHAPUS WARNA MERAH */
+    .hero-spmb {
+      background: linear-gradient(135deg, #1a472a, #2ecc71);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-spmb::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="rgba(255,255,255,0.1)"></path></svg>');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .hero-spmb h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .hero-spmb p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: 0 auto 20px;
+      opacity: 0.9;
+    }
+
+    /* Main Container dengan layout baru */
+    .main-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 30px;
+    }
+
+    /* Brosur Section */
+    .brosur-section {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .section-title {
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid #1a472a;
+      position: relative;
+    }
+
+    .section-title h3 {
+      color: #1a472a;
+      font-size: 22px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brosur-container {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .brosur-item {
+      text-align: center;
+    }
+
+    .brosur-item h4 {
+      color: #1a472a;
+      margin-bottom: 15px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .brosur-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .brosur-image:hover {
+      transform: scale(1.01);
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      height: fit-content;
+      position: sticky;
+      top: 100px;
+    }
+
+    .sidebar-title {
+      color: #1a472a;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #2ecc71;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .info-box {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border-left: 4px solid #2ecc71;
+    }
+
+    .info-box h4 {
+      color: #1a472a;
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .info-box p {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .contact-list li {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #f0f0f0;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .contact-list li:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .contact-list i {
+      color: #2ecc71;
+      font-size: 16px;
+      margin-top: 2px;
+      min-width: 16px;
+    }
+
+    .contact-list span {
+      color: #333;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1a472a;
+      color: white;
+      margin-top: 80px;
+      padding: 30px 15px 15px;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .footer-col h4 {
+      margin-bottom: 15px;
+      color: #2ecc71;
+      font-size: 18px;
+      font-weight: 600;
+      position: relative;
+      padding-bottom: 8px;
+    }
+
+    .footer-col h4::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      background-color: #2ecc71;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 8px;
+      padding-bottom: 8px;
+      color: #ddd;
+      line-height: 1.4;
+      font-size: 13px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .footer-col ul li:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .footer-col a {
+      color: #ddd;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 13px;
+      display: block;
+      padding: 2px 0;
+    }
+
+    .footer-col a:hover {
+      color: #2ecc71;
+      padding-left: 5px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #aaa;
+      font-size: 12px;
+      max-width: 1200px;
+      margin: 0 auto;
+      line-height: 1.3;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .topbar {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+      
+      header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 20px;
+      }
+      
+      .logo-section {
+        justify-content: center;
+      }
+      
+      .hero-spmb h2 {
+        font-size: 28px;
+      }
+      
+      .hero-spmb p {
+        font-size: 16px;
+      }
+      
+      .main-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      
+      .sidebar {
+        position: static;
+      }
+      
+      .footer-content {
+        gap: 20px;
+      }
+      
+      .footer-col ul li {
+        margin-bottom: 6px;
+        padding-bottom: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <span><i class="far fa-calendar-alt"></i> <span id="date"></span></span>
+    </div>
+
+    <div class="social-icons">
+      <span>Ikuti Kami:</span>
+      <a href="https://www.tiktok.com" target="_blank" class="social-icon" title="TikTok">
+        <i class="fab fa-tiktok"></i>
+      </a>
+      <a href="https://www.youtube.com" target="_blank" class="social-icon" title="YouTube">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://www.instagram.com" target="_blank" class="social-icon" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com" target="_blank" class="social-icon" title="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-section">
+      <div class="logo-img">
+        <img src="gambar/logo.png" alt="Logo SMP Negeri 1 Nogosari" onerror="this.src='https://via.placeholder.com/180x180?text=LOGO+SMP'">
+      </div>
+      <div class="header-text">
+        <h1>SMP Negeri 1 Nogosari</h1>
+        <p>Beriman • Berilmu • Berprestasi</p>
+      </div>
+    </div>
+    <div class="search-box">
+      <input type="text" placeholder="Cari informasi...">
+      <i class="fas fa-search"></i>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    
+    <div class="menu-links" id="menuLinks">
+      <a href="index.html"><i class="fas fa-home"></i> Beranda</a>
+
+      <!-- Dropdown Profil -->
+      <div class="dropdown">
+        <a href="profil.html"><i class="fas fa-info-circle"></i> Profil ▾</a>
+        <div class="dropdown-content">
+          <a href="visi-misi.html"><i class="fas fa-bullseye"></i> Visi & Misi</a>
+          <a href="guru.html"><i class="fas fa-chalkboard-teacher"></i> Guru</a>
+          <a href="tenaga-kependidikan.html"><i class="fas fa-user-tie"></i> Tenaga Kependidikan</a>
+          <a href="sejarah.html"><i class="fas fa-history"></i> Sejarah</a>
+        </div>
+      </div>
+
+      <!-- Dropdown Program -->
+      <div class="dropdown">
+        <a href="program.html"><i class="fas fa-book"></i> Program ▾</a>
+        <div class="dropdown-content">
+          <a href="kurikulum.html"><i class="fas fa-graduation-cap"></i> Kurikulum</a>
+          <a href="kesiswaan.html"><i class="fas fa-users"></i> Kesiswaan</a>
+          <a href="sarana-prasarana.html"><i class="fas fa-building"></i> Sarana Prasarana</a>
+          <a href="humas.html"><i class="fas fa-handshake"></i> Humas</a>
+          <a href="osis.html"><i class="fas fa-user-friends"></i> OSIS</a>
+        </div>
+      </div>
+      
+      <a href="berita.html"><i class="fas fa-newspaper"></i> Berita</a>
+      
+      <!-- Menu SPMB - Active -->
+      <a href="spmb.html" class="spmb-btn active"><i class="fas fa-user-graduate"></i> SPMB</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section SPMB -->
+  <section class="hero-spmb">
+    <div class="hero-content">
+      <h2>SPMB</h2>
+      <p>Seleksi Penerimaan Murid Baru SMP Negeri 1 Nogosari Tahun Ajaran 2025/2026</p>
+    </div>
+  </section>
+
+  <!-- Main Container -->
+  <main class="main-container">
+    <!-- Brosur Section -->
+    <section class="brosur-section" id="brosur">
+      <div class="section-title">
+        <h3><i class="fas fa-images"></i> Brosur SPMB 2025/2026</h3>
+      </div>
+      
+      <div class="brosur-container">
+        <div class="brosur-item">
+          <h4>Informasi SPMB 2025/2026</h4>
+          <img src="gambar/brosur1.png" alt="Brosur SPMB SMP Negeri 1 Nogosari 2025/2026" class="brosur-image" 
+               onerror="this.src='https://via.placeholder.com/600x800?text=BROSUR+SPMB+2025/2026'">
+        </div>
+        
+        <div class="brosur-item">
+          <h4>Pendaftaran SPMB Gel 2</h4>
+          <img src="gambar/brosur2.png" alt="Alur Pendaftaran SPMB SMP Negeri 1 Nogosari 2025/2026" class="brosur-image"
+               onerror="this.src='https://via.placeholder.com/600x800?text=ALUR+PENDAFTARAN+SPMB'">
+        </div>
+      </div>
+    </section>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-title">
+        <i class="fas fa-info-circle"></i> Informasi
+      </div>
+      
+      <div class="info-box">
+        <h4>Periode Pendaftaran</h4>
+        <p>1 November - 15 Desember 2025</p>
+      </div>
+      
+      <div class="info-box">
+        <h4>Tes Seleksi</h4>
+        <p>3 Januari 2026</p>
+      </div>
+      
+      <div class="info-box">
+        <h4>Pengumuman Hasil</h4>
+        <p>10 Januari 2026</p>
+      </div>
+
+      <div class="sidebar-title" style="margin-top: 30px;">
+        <i class="fas fa-headset"></i> Kontak Panitia
+      </div>
+      
+      <ul class="contact-list">
+        <li>
+          <i class="fas fa-phone"></i>
+          <span>(0276) 321654<br><small>08:00 - 16:00 WIB</small></span>
+        </li>
+        <li>
+          <i class="fas fa-envelope"></i>
+          <span>spmb@smpn1nogosari.sch.id</span>
+        </li>
+        <li>
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Jln Raya Simo - Kalioso Km. 10<br>Nogosari, Boyolali</span>
+        </li>
+        <li>
+          <i class="fas fa-clock"></i>
+          <span>Senin - Jumat<br>08:00 - 16:00 WIB</span>
+        </li>
+      </ul>
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>Tentang Sekolah</h4>
+        <ul>
+          <li><a href="profil.html"><i class="fas fa-chevron-right"></i> Profil Lengkap</a></li>
+          <li><a href="visi-misi.html"><i class="fas fa-chevron-right"></i> Visi & Misi</a></li>
+          <li><a href="sejarah.html"><i class="fas fa-chevron-right"></i> Sejarah Sekolah</a></li>
+          <li><a href="program.html"><i class="fas fa-chevron-right"></i> Program Unggulan</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Tautan Penting</h4>
+        <ul>
+          <li><a href="guru.html"><i class="fas fa-chevron-right"></i> Daftar Guru & Staf</a></li>
+          <li><a href="sarana-prasarana.html"><i class="fas fa-chevron-right"></i> Fasilitas Sekolah</a></li>
+          <li><a href="kurikulum.html"><i class="fas fa-chevron-right"></i> Kurikulum Merdeka</a></li>
+          <li><a href="spmb.html" style="color: #2ecc71;"><i class="fas fa-chevron-right"></i> Pendaftaran SPMB</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Media Sosial</h4>
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i> Twitter/X</a></li>
+          <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak Kami</h4>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i> Jln Raya Simo - Kalioso Km. 10 Nogosari, Glonggong, Nogosari, Boyolali</li>
+          <li><i class="fas fa-phone"></i> (0276) 123456</li>
+          <li><i class="fas fa-envelope"></i> smpnegeri1nogosaribyl@gmail.com</li>
+          <li><i class="fas fa-clock"></i> Senin–Jumat: 07:00–16:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 SMP Negeri 1 Nogosari. All Rights Reserved. | Dikembangkan dengan <i class="fas fa-heart" style="color: #2ecc71;"></i></p>
+    </div>
+  </footer>
+
+  <script>
+    // Update date and time
+    function updateDateTime() {
+      const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
+      const today = new Date();
+      const date = today.toLocaleDateString('id-ID', options);
+      
+      document.getElementById('date').textContent = date;
+    }
+
+    updateDateTime();
+
+    // Toggle menu
+    function toggleMenu() {
+      document.getElementById('menuLinks').classList.toggle('active');      
+    }
+
+    // Close menu when link is clicked
+    document.querySelectorAll('.menu-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('menuLinks').classList.remove('active');
+      });
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

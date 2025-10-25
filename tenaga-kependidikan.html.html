@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Data Guru SMP Negeri 1 Nogosari - Profil dan informasi lengkap tenaga pendidik">
+  <meta name="keywords" content="SMP Negeri 1 Nogosari, guru, tenaga pendidik, pengajar, Boyolali">
+  <title>Guru & Staf - SMP Negeri 1 Nogosari</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      background-color: #f9f9f9;
+      line-height: 1.6;
+    }
+
+    /* Top Bar */
+    .topbar {
+      background-color: #1a472a;
+      color: white;
+      padding: 8px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      font-weight: 300;
+    }
+
+    .topbar-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background-color: rgba(255,255,255,0.15);
+      transition: 0.3s;
+      color: white;
+      text-decoration: none;
+    }
+
+    .social-icon:hover {
+      background-color: #2ecc71;
+      transform: translateY(-2px);
+    }
+
+    /* Header */
+    header {
+     background-color: white;
+     padding: 0px 20px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+     flex-wrap: wrap;
+     gap: 8px;
+     border-bottom: 1px solid #f5f5f5;
+     min-height: 50px;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .logo-img {
+      width: 180px;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .logo-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .header-text h1 {
+      color: #1a472a;
+      font-size: 30px;
+      margin-bottom: 2px;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .header-text p {
+      color: #666;
+      font-size: 19px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      margin-top: 0;
+      line-height: 1.1;
+    }
+
+    .search-box {
+      flex: 1;
+      min-width: 180px;
+      max-width: 200px;
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 4px 25px 4px 6px;
+      border: 1px solid #e8e8e8;
+      border-radius: 2px;
+      font-size: 14px;
+      transition: 0.2s;
+      height: 50px;
+    }
+
+    .search-box input:focus {
+      border-color: #2ecc71;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.2);
+    }
+
+    .search-box i {
+      position: absolute;
+      right: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #777;
+      font-size: 14px;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #1a472a;
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .menu-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .menu-links a {
+      color: white;
+      text-decoration: none;
+      padding: 16px 22px;
+      display: block;
+      transition: 0.3s;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .menu-links a:hover {
+      background-color: rgba(255,255,255,0.1);
+    }
+
+    .menu-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 3px;
+      background-color: #2ecc71;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .menu-links a:hover::after {
+      width: 80%;
+    }
+
+    .menu-links a.active {
+      background-color: rgba(255,255,255,0.1);
+    }
+
+    .menu-links a.active::after {
+      width: 80%;
+    }
+
+    /* Dropdown */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      min-width: 220px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border-radius: 0 0 8px 8px;
+      overflow: hidden;
+      z-index: 999;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 12px 18px;
+      display: block;
+      text-decoration: none;
+      transition: 0.3s;
+      border-bottom: 1px solid #f0f0f0;
+      font-weight: 400;
+    }
+
+    .dropdown-content a:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f8f9fa;
+      color: #2ecc71;
+      padding-left: 22px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 15px 20px;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .menu-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .menu-links.active {
+        display: flex;
+      }
+
+      .menu-links a {
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+      }
+
+      .dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: rgba(0,0,0,0.1);
+      }
+
+      .dropdown-content a {
+        color: white;
+        padding-left: 40px;
+      }
+
+      .dropdown-content a:hover {
+        background-color: rgba(255,255,255,0.1);
+        color: white;
+      }
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #1a472a, #2ecc71);
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="rgba(255,255,255,0.1)"></path></svg>');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    /* Section Title */
+    .section-title {
+      margin: 30px 0 20px 0;
+      padding-left: 15px;
+      position: relative;
+    }
+
+    .section-title::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 4px;
+      background-color: #2ecc71;
+      border-radius: 2px;
+    }
+
+    .section-title h3 {
+      color: #1a472a;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    /* Guru Grid */
+    .guru-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+
+    .guru-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: 0.3s;
+      border-top: 4px solid #2ecc71;
+    }
+
+    .guru-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .guru-img {
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+    }
+
+    .guru-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.3s;
+    }
+
+    .guru-card:hover .guru-img img {
+      transform: scale(1.05);
+    }
+
+    .guru-info {
+      padding: 20px;
+    }
+
+    .guru-info h3 {
+      color: #1a472a;
+      font-size: 18px;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    .guru-jabatan {
+      color: #2ecc71;
+      font-weight: 500;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .guru-bidang {
+      color: #777;
+      font-size: 14px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .guru-contact {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: #f5f5f5;
+      color: #555;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .contact-btn:hover {
+      background-color: #2ecc71;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* Filter Guru */
+    .filter-section {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+      border-top: 4px solid #2ecc71;
+    }
+
+    .filter-title {
+      color: #1a472a;
+      margin-bottom: 15px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .filter-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .filter-btn {
+      padding: 8px 16px;
+      background: #f5f5f5;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 14px;
+    }
+
+    .filter-btn:hover {
+      background: #e9e9e9;
+    }
+
+    .filter-btn.active {
+      background: #2ecc71;
+      color: white;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .sidebar-box {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      border-top: 4px solid #2ecc71;
+    }
+
+    .sidebar-box h4 {
+      color: #1a472a;
+      margin-bottom: 18px;
+      font-size: 18px;
+      font-weight: 600;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .sidebar-box h4::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      background-color: #2ecc71;
+    }
+
+    .sidebar-box ul {
+      list-style: none;
+    }
+
+    .sidebar-box ul li {
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .sidebar-box ul li:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .sidebar-box ul li a {
+      color: #555;
+      text-decoration: none;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 400;
+    }
+
+    .sidebar-box ul li a:hover {
+      color: #2ecc71;
+      padding-left: 5px;
+    }
+
+    .sidebar-box ul li a::before {
+      content: '▸';
+      color: #2ecc71;
+      font-size: 14px;
+    }
+
+    .sidebar-box p {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1a472a;
+      color: white;
+      margin-top: 80px;
+      padding: 30px 15px 15px;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .footer-col h4 {
+      margin-bottom: 15px;
+      color: #2ecc71;
+      font-size: 18px;
+      font-weight: 600;
+      position: relative;
+      padding-bottom: 8px;
+    }
+
+    .footer-col h4::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      background-color: #2ecc71;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 8px;
+      padding-bottom: 8px;
+      color: #ddd;
+      line-height: 1.4;
+      font-size: 13px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .footer-col ul li:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .footer-col a {
+      color: #ddd;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 13px;
+      display: block;
+      padding: 2px 0;
+    }
+
+    .footer-col a:hover {
+      color: #2ecc71;
+      padding-left: 5px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #aaa;
+      font-size: 12px;
+      max-width: 1200px;
+      margin: 0 auto;
+      line-height: 1.3;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .topbar {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+      
+      header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 20px;
+      }
+      
+      .logo-section {
+        justify-content: center;
+      }
+      
+      .hero h2 {
+        font-size: 28px;
+      }
+      
+      .hero p {
+        font-size: 16px;
+      }
+      
+      .guru-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .filter-options {
+        justify-content: center;
+      }
+      
+      .footer-content {
+        gap: 20px;
+      }
+      
+      .footer-col ul li {
+        margin-bottom: 6px;
+        padding-bottom: 6px;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .main-layout {
+        display: grid;
+        grid-template-columns: 1fr 350px;
+        gap: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <span><i class="far fa-calendar-alt"></i> <span id="date"></span></span>
+      <span><i class="far fa-clock"></i> <span id="time"></span></span>
+    </div>
+
+    <div class="social-icons">
+      <span>Ikuti Kami:</span>
+      <a href="https://www.tiktok.com" target="_blank" class="social-icon" title="TikTok">
+        <i class="fab fa-tiktok"></i>
+      </a>
+      <a href="https://www.youtube.com" target="_blank" class="social-icon" title="YouTube">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://www.instagram.com" target="_blank" class="social-icon" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com" target="_blank" class="social-icon" title="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-section">
+      <div class="logo-img">
+        <img src="gambar/logo.png" alt="Logo SMP Negeri 1 Nogosari" onerror="this.src='https://via.placeholder.com/180x180?text=LOGO+SMP'">
+      </div>
+      <div class="header-text">
+        <h1>SMP Negeri 1 Nogosari</h1>
+        <p>Beriman • Berilmu • Berprestasi</p>
+      </div>
+    </div>
+    <div class="search-box">
+      <input type="text" placeholder="Cari guru...">
+      <i class="fas fa-search"></i>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    
+    <div class="menu-links" id="menuLinks">
+      <a href="index.html"><i class="fas fa-home"></i> Beranda</a>
+
+      <!-- Dropdown Profil -->
+      <div class="dropdown">
+        <a href="profil.html"><i class="fas fa-info-circle"></i> Profil ▾</a>
+        <div class="dropdown-content">
+          <a href="visi-misi.html"><i class="fas fa-bullseye"></i> Visi & Misi</a>
+          <a href="guru.html" class="active"><i class="fas fa-chalkboard-teacher"></i> Guru</a>
+          <a href="tenaga-kependidikan.html"><i class="fas fa-user-tie"></i> Tenaga Kependidikan</a>
+          <a href="sejarah.html"><i class="fas fa-history"></i> Sejarah</a>
+        </div>
+      </div>
+
+      <!-- Dropdown Program -->
+      <div class="dropdown">
+        <a href="program.html"><i class="fas fa-book"></i> Program ▾</a>
+        <div class="dropdown-content">
+          <a href="kurikulum.html"><i class="fas fa-graduation-cap"></i> Kurikulum</a>
+          <a href="kesiswaan.html"><i class="fas fa-users"></i> Kesiswaan</a>
+          <a href="sarana-prasarana.html"><i class="fas fa-building"></i> Sarana Prasarana</a>
+          <a href="humas.html"><i class="fas fa-handshake"></i> Humas</a>
+          <a href="osis.html"><i class="fas fa-user-friends"></i> OSIS</a>
+        </div>
+      </div>
+      
+      <a href="berita.html"><i class="fas fa-newspaper"></i> Berita</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Guru & Tenaga Pendidik</h2>
+      <p>Mengenal para guru dan tenaga pendidik yang berdedikasi tinggi di SMP Negeri 1 Nogosari</p>
+    </div>
+  </section>
+
+  <!-- Main Container -->
+  <main class="container">
+    <div class="main-layout">
+      <!-- Main Content -->
+      <section class="main-content">
+        <!-- Filter Guru -->
+        <div class="filter-section">
+          <div class="filter-title">Filter Guru Berdasarkan Mata Pelajaran:</div>
+          <div class="filter-options">
+            <button class="filter-btn active" data-filter="all">Semua</button>
+            <button class="filter-btn" data-filter="matematika">Matematika</button>
+            <button class="filter-btn" data-filter="bahasa">Bahasa Indonesia</button>
+            <button class="filter-btn" data-filter="ipa">IPA</button>
+            <button class="filter-btn" data-filter="ips">IPS</button>
+            <button class="filter-btn" data-filter="inggris">Bahasa Inggris</button>
+            <button class="filter-btn" data-filter="agama">Pendidikan Agama</button>
+            <button class="filter-btn" data-filter="pjok">PJOK</button>
+            <button class="filter-btn" data-filter="seni">Seni Budaya</button>
+          </div>
+        </div>
+
+        <!-- Daftar Guru -->
+        <div class="section-title"><h3><i class="fas fa-chalkboard-teacher"></i> Daftar Guru</h3></div>
+        <div class="guru-grid" id="guruContainer">
+          <!-- Guru 1 -->
+          <div class="guru-card" data-category="matematika">
+            <div class="guru-img">
+              <img src="images/guru1.jpg" alt="J. Ageng Wibowo, SR., S.Ag" onerror="this.src='https://via.placeholder.com/280x250/1a472a/ffffff?text=GURU+MATEMATIKA'">
+            </div>
+            <div class="guru-info">
+              <h3>J. Ageng Wibowo, SR., S.Ag</h3>
+              <div class="guru-jabatan">Kepala Sekolah & Guru Matematika</div>
+              <div class="guru-bidang"><i class="fas fa-book"></i> Matematika</div>
+              <p>Memimpin SMP Negeri 1 Nogosari sejak 2020 dengan visi membentuk generasi berkarakter dan berprestasi.</p>
+              <div class="guru-contact">
+                <a href="mailto:ageng.wibowo@smpn1nogosari.sch.id" class="contact-btn" title="Email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+                <a href="#" class="contact-btn" title="Profil Lengkap">
+                  <i class="fas fa-user"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Guru 2 -->
+          <div class="guru-card" data-category="bahasa">
+            <div class="guru-img">
+              <img src="images/guru2.jpg" alt="Dra. Siti Aminah" onerror="this.src='https://via.placeholder.com/280x250/1a472a/ffffff?text=GURU+BAHASA'">
+            </div>
+            <div class="guru-info">
+              <h3>Dra. Siti Aminah</h3>
+              <div class="guru-jabatan">Guru Bahasa Indonesia</div>
+              <div class="guru-bidang"><i class="fas fa-book"></i> Bahasa Indonesia</div>
+              <p>Pengajar dengan pengalaman 15 tahun yang berkomitmen meningkatkan literasi siswa.</p>
+              <div class="guru-contact">
+                <a href="mailto:siti.aminah@smpn1nogosari.sch.id" class="contact-btn" title="Email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+                <a href="#" class="contact-btn" title="Profil Lengkap">
+                  <i class="fas fa-user"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Guru 3 -->
+          <div class="guru-card" data-category="ipa">
+            <div class="guru-img">
+              <img src="images/guru3.jpg" alt="Budi Santoso, M.Pd" onerror="this.src='https://via.placeholder.com/280x250/1a472a/ffffff?text=GURU+IPA'">
+            </div>
+            <div class="guru-info">
+              <h3>Budi Santoso, M.Pd</h3>
+              <div class="guru-jabatan">Guru IPA</div>
+              <div class="guru-bidang"><i class="fas fa-book"></i> Ilmu Pengetahuan Alam</div>
+              <p>Spesialis dalam pembelajaran sains dengan pendekatan eksperimen dan praktikum.</p>
+              <div class="guru-contact">
+                <a href="mailto:budi.santoso@smpn1nogosari.sch.id" class="contact-btn" title="Email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+                <a href="#" class="contact-btn" title="Profil Lengkap">
+                  <i class="fas fa-user"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Guru 4 -->
+          <div class="guru-card" data-category="inggris">
+            <div class="guru-img">
+              <img src="images/guru4.jpg" alt="Maria Ulfa, S.Pd" onerror="this.src='https://via.placeholder.com/280x250/1a472a/ffffff?text=GURU+BAHASA+INGGRIS'">
+            </div>
+            <div class="guru-info">
+              <h3>Maria Ulfa, S.Pd</h3>
+              <div class="guru-jabatan">Guru Bahasa Inggris</div>
+              <div class="guru-bidang"><i class="fas fa-book"></i> Bahasa Inggris</div>
+              <p>Mengajar dengan metode komunikatif untuk meningkatkan kemampuan berbahasa Inggris siswa.</p>
+              <div class="guru-contact">
+                <a href="mailto:maria.ulfa@smpn1nogosari.sch.id" class="contact-btn" title="Email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+                <a href="#" class="contact-btn" title="Profil Lengkap">
+                  <i class="fas fa-user"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Guru 5 -->
+          <div class="guru-card" data-category="ips">
+            <div class="guru-img">
+              <img src="images/guru5.jpg" alt="Drs. Ahmad Fauzi" onerror="this.src='https://via.placeholder.com/280x250/1a472a/ffffff?text=GURU+IPS'">
+            </div>
+            <div class="guru-info">
+              <h3>Drs. Ahmad Fauzi</h3>
+              <div class="guru-jabatan">Guru IPS</div>
+              <div class="guru-bidang"><i class="fas fa-book"></i> Ilmu Pengetahuan Sosial</div>
+              <p>Ahli dalam pembelajaran sejarah dan sosial dengan pendekatan kontekstual.</p>
+              <div class="guru-contact">
+                <a href="mailto:ahmad.fauzi@smpn1nogosari.sch.id" class="contact-btn" title="Email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+                <a href="#" class="contact-btn" title="Profil Lengkap">
+                  <i class="fas fa-user"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Guru 6 -->
+          <div class="guru-card" data-category="agama">
+            <div class="guru-img">
+              <img src="images/guru6.jpg" alt="H. Muhammad Ali, S.Ag" onerror="this.src='https://via.placeholder.com/280x250/1a472a/ffffff?text=GURU+AGAMA'">
+            </div>
+            <div class="guru-info">
+              <h3>H. Muhammad Ali, S.Ag</h3>
+              <div class="guru-jabatan">Guru Pendidikan Agama Islam</div>
+              <div class="guru-bidang"><i class="fas fa-book"></i> Pendidikan Agama Islam</div>
+              <p>Membimbing siswa dalam pembentukan karakter dan akhlak mulia berdasarkan nilai-nilai agama.</p>
+              <div class="guru-contact">
+                <a href="mailto:muhammad.ali@smpn1nogosari.sch.id" class="contact-btn" title="Email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+                <a href="#" class="contact-btn" title="Profil Lengkap">
+                  <i class="fas fa-user"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-box">
+          <h4><i class="fas fa-bolt"></i> Akses Cepat</h4>
+          <ul>
+            <li><a href="profil.html">Profil Sekolah</a></li>
+            <li><a href="visi-misi.html">Visi & Misi</a></li>
+            <li><a href="guru.html">Daftar Guru</a></li>
+            <li><a href="tenaga-kependidikan.html">Tenaga Kependidikan</a></li>
+            <li><a href="sarana-prasarana.html">Fasilitas Sekolah</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-box">
+          <h4><i class="fas fa-tags"></i> Mata Pelajaran</h4>
+          <ul>
+            <li><a href="#matematika"><i class="fas fa-calculator"></i> Matematika</a></li>
+            <li><a href="#bahasa"><i class="fas fa-book"></i> Bahasa Indonesia</a></li>
+            <li><a href="#ipa"><i class="fas fa-flask"></i> IPA</a></li>
+            <li><a href="#ips"><i class="fas fa-globe"></i> IPS</a></li>
+            <li><a href="#inggris"><i class="fas fa-language"></i> Bahasa Inggris</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-box">
+          <h4><i class="fas fa-info-circle"></i> Informasi</h4>
+          <p><strong>Total Guru:</strong> 28 orang<br>
+          <strong>Guru Bersertifikasi:</strong> 22 orang<br>
+          <strong>Rasio Guru:Siswa:</strong> 1:18</p>
+        </div>
+
+        <div class="sidebar-box">
+          <h4><i class="fas fa-calendar-alt"></i> Jadwal Guru Piket</h4>
+          <p><strong>Senin:</strong> Bu Siti & Pak Budi<br>
+          <strong>Selasa:</strong> Bu Maria & Pak Ahmad<br>
+          <strong>Rabu:</strong> Pak Ageng & Bu Siti<br>
+          <strong>Kamis:</strong> Pak H. Ali & Bu Maria</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>Tentang Sekolah</h4>
+        <ul>
+          <li><a href="profil.html"><i class="fas fa-chevron-right"></i> Profil Lengkap</a></li>
+          <li><a href="visi-misi.html"><i class="fas fa-chevron-right"></i> Visi & Misi</a></li>
+          <li><a href="sejarah.html"><i class="fas fa-chevron-right"></i> Sejarah Sekolah</a></li>
+          <li><a href="program.html"><i class="fas fa-chevron-right"></i> Program Unggulan</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Tautan Penting</h4>
+        <ul>
+          <li><a href="guru.html"><i class="fas fa-chevron-right"></i> Daftar Guru & Staf</a></li>
+          <li><a href="sarana-prasarana.html"><i class="fas fa-chevron-right"></i> Fasilitas Sekolah</a></li>
+          <li><a href="kurikulum.html"><i class="fas fa-chevron-right"></i> Kurikulum Merdeka</a></li>
+          <li><a href="#prestasi"><i class="fas fa-chevron-right"></i> Prestasi Siswa</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Media Sosial</h4>
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i> Twitter/X</a></li>
+          <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak Kami</h4>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i> Jln Raya Simo - Kalioso Km. 10 Nogosari, Glonggong, Nogosari, Boyolali</li>
+          <li><i class="fas fa-phone"></i> (0276) 123456</li>
+          <li><i class="fas fa-envelope"></i> smpnegeri1nogosaribyl@gmail.com</li>
+          <li><i class="fas fa-clock"></i> Senin–Jumat: 07:00–16:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 SMP Negeri 1 Nogosari. All Rights Reserved. | Dikembangkan dengan <i class="fas fa-heart" style="color: #2ecc71;"></i></p>
+    </div>
+  </footer>
+
+  <script>
+    // Update date and time
+    function updateDateTime() {
+      const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
+      const today = new Date();
+      const date = today.toLocaleDateString('id-ID', options);
+      const time = today.toLocaleTimeString('id-ID');
+      
+      document.getElementById('date').textContent = date;
+      document.getElementById('time').textContent = time;
+    }
+
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+
+    // Toggle menu
+    function toggleMenu() {
+      document.getElementById('menuLinks').classList.toggle('active');      
+    }
+
+    // Close menu when link is clicked
+    document.querySelectorAll('.menu-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('menuLinks').classList.remove('active');
+      });
+    });
+
+    // Filter functionality for teachers
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const guruCards = document.querySelectorAll('.guru-card');
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          
+          // Add active class to clicked button
+          this.classList.add('active');
+          
+          const filterValue = this.getAttribute('data-filter');
+          
+          guruCards.forEach(card => {
+            if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
